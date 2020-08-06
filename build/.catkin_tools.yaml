@@ -1,0 +1,6 @@
+devel_space: /home/harshil/ws_moveit/devel
+install: false
+install_space: /home/harshil/ws_moveit/install
+profile: default
+source_space: /home/harshil/ws_moveit/src
+workspace: /home/harshil/ws_moveit

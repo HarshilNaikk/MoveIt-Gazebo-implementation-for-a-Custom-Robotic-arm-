@@ -1,0 +1,3 @@
+Symlinking /home/harshil/ws_moveit/devel/share/bot_assembly_gazebo/cmake/bot_assembly_gazeboConfig-version.cmake
+Symlinking /home/harshil/ws_moveit/devel/share/bot_assembly_gazebo/cmake/bot_assembly_gazeboConfig.cmake
+Symlinking /home/harshil/ws_moveit/devel/lib/pkgconfig/bot_assembly_gazebo.pc

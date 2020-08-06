@@ -1,0 +1,8 @@
+prefix=/home/harshil/ws_moveit/devel/.private/bot_assembly_gazebo
+
+Name: bot_assembly_gazebo
+Description: Description of bot_assembly_gazebo
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

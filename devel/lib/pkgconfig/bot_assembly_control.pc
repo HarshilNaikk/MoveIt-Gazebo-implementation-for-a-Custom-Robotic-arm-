@@ -1,0 +1,1 @@
+/home/harshil/ws_moveit/devel/.private/bot_assembly_control/lib/pkgconfig/bot_assembly_control.pc

@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/harshil/ws_moveit/devel/.private/bot_assembly_gazebo/setup.sh

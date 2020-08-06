@@ -1,0 +1,10 @@
+bot_assembly:
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+  arm_controller:
+    type: position_controllers/JointTrajectoryController
+    joints:
+      - j2
+      - j3
+  

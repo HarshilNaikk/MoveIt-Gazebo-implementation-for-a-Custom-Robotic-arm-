@@ -1,0 +1,486 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="bot_assembly" xmlns:xacro="http://ros.org/wiki/xacro">
+  <link
+    name="main_base_link">
+
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bot_assembly/meshes/main_base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.89804 0.91765 0.92941 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bot_assembly/meshes/main_base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="l1">
+    <inertial>
+      <origin
+        xyz="-0.0674186435568362 0.51321510582243 -0.096849069439832"
+        rpy="0 0 0" />
+      <mass
+        value="6.61755179920267" />
+      <inertia
+        ixx="0.655050543939446"
+        ixy="1.65779375058063E-09"
+        ixz="0.000669517730807761"
+        iyy="0.079798604529812"
+        iyz="-3.91298293978655E-09"
+        izz="0.63018843831452" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bot_assembly/meshes/l1.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.898039215686275 0.898039215686275 0.898039215686275 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bot_assembly/meshes/l1.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j1"
+    type="fixed">
+    <origin
+      xyz="0.31878 -0.27122 0.24496"
+      rpy="1.5708 0 1.5977" />
+    <parent
+      link="main_base_link" />
+    <child
+      link="l1" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="l2">
+    <inertial>
+      <origin
+        xyz="-0.068 0.070163 0.026794"
+        rpy="0 0 0" />
+      <mass
+        value="3.9071" />
+      <inertia
+        ixx="0.45573"
+        ixy="2.7364E-09"
+        ixz="-1.6121E-07"
+        iyy="0.46423"
+        iyz="0.0029725"
+        izz="0.014014" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bot_assembly/meshes/l2.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bot_assembly/meshes/l2.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j2"
+    type="prismatic">
+    <origin
+      xyz="-0.016767 0.73192 -0.027461"
+      rpy="3.1416 -1.5439 3.1416" />
+    <parent
+      link="l1" />
+    <child
+      link="l2" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-0.7"
+      upper="0.1"
+      effort="1000"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="l3">
+    <inertial>
+      <origin
+        xyz="0.0204507831277074 0.12114677143593 0.155153998314424"
+        rpy="0 0 0" />
+      <mass
+        value="1.19444448653725" />
+      <inertia
+        ixx="0.00139909814984447"
+        ixy="0.000813340851803751"
+        ixz="-0.000238022367591633"
+        iyy="0.00416058392365566"
+        iyz="0.000149726674267273"
+        izz="0.00467223954078817" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bot_assembly/meshes/l3.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bot_assembly/meshes/l3.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j3"
+    type="prismatic">
+    <origin
+      xyz="-0.068 -0.0605 0.76532"
+      rpy="0 0 0" />
+    <parent
+      link="l2" />
+    <child
+      link="l3" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.5"
+      upper="0.1"
+      effort="1000"
+      velocity="0.5" />
+  </joint>
+  <link
+    name="l4">
+    <inertial>
+      <origin
+        xyz="-0.0943075268098245 0.0232235457451335 0.0675804090439029"
+        rpy="0 0 0" />
+      <mass
+        value="0.319278905365492" />
+      <inertia
+        ixx="0.000689019753386584"
+        ixy="-9.72189296472913E-06"
+        ixz="9.06761806693416E-05"
+        iyy="0.00153185544981054"
+        iyz="-6.11704579341736E-05"
+        izz="0.000956928231077063" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bot_assembly/meshes/l4.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://bot_assembly/meshes/l4.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="j4"
+    type="fixed">
+    <origin
+      xyz="0.099129 -0.065634 0.19986"
+      rpy="-1.6309 -0.18887 0.31013" />
+    <parent
+      link="l3" />
+    <child
+      link="l4" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+
+  <!-- Import summit XL wheels -->
+    <!-- Wheels -->
+  <xacro:property name="wheel_radius" value="0.127" />
+  <xacro:property name="wheel_height" value="0.087" />
+  <xacro:property name="wheel_mass" value="6.5" /> <!-- in kg-->
+
+  <xacro:macro name="cylinder_inertia" params="m r h">
+    <inertia  ixx="${m*(3*r*r+h*h)/12}" ixy = "0" ixz = "0"
+              iyy="${m*r*r/2}" iyz = "0"
+              izz="${m*(3*r*r+h*h)/12}" />
+  </xacro:macro>
+
+  <xacro:macro name="omni_wheel" params="prefix parent *origin reflect">
+
+    <joint name="${prefix}_wheel_joint" type="continuous">
+      <parent link="${parent}"/>
+      <child link="${prefix}_wheel_link"/>
+      <xacro:insert_block name="origin" />
+      <axis xyz="0 1 0" rpy="0 0 0" />
+      <limit effort="100" velocity="100"/>
+      <joint_properties damping="0.0" friction="0.0"/>
+    </joint>
+
+    <link name="${prefix}_wheel_link">
+      <visual>
+        <origin xyz="0 0 0" rpy="0 0 0" />
+        <xacro:if value="${reflect}">
+          <geometry>
+            <mesh filename="package://summit_description/meshes/wheels/omni_wheel_1.dae" />
+          </geometry>
+          </xacro:if>
+          <xacro:unless value="${reflect}">
+            <geometry>
+              <mesh filename="package://summit_description/meshes/wheels/omni_wheel_2.dae" />
+            </geometry>
+            </xacro:unless>
+      </visual>
+
+      <collision>
+                <origin xyz="0 0 0" rpy="${PI/2} 0 0" />
+        <geometry>
+                    <cylinder length="${wheel_height}" radius="${wheel_radius}" />
+        </geometry>
+      </collision>
+
+      <inertial>
+        <mass value="${wheel_mass}" />
+        <origin xyz="0 0 0" />
+        <cylinder_inertia  m="${wheel_mass}" r="${wheel_radius}" h="${wheel_height}" />
+      </inertial>
+    </link>
+
+    <!-- Transmission is important to link the joints and the controller (see summit_xl_control/config/summit_xl_control.yaml)-->
+    <transmission name="${prefix}_wheel_joint_trans">
+      <type>transmission_interface/SimpleTransmission</type>
+      <joint name="${prefix}_wheel_joint" >
+        <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+      </joint>
+      <actuator name="${prefix}_wheel_joint_motor">
+         <mechanicalReduction>1</mechanicalReduction>
+      </actuator>
+    </transmission>
+
+    <gazebo reference="${prefix}_wheel_link">
+        <mu1 value="1.0"/>
+        <mu2 value="1.0"/>
+        <kp value="10000000.0" />
+        <kd value="1.0" />
+        <fdir1 value="1 0 0"/>
+        <turnGravityOff>false</turnGravityOff>
+    </gazebo>
+
+  </xacro:macro>
+
+  
+
+ 
+
+  
+      <xacro:include filename="$(find summit_description)/urdf/base/summit_base.gazebo.xacro" />
+      <!-- Robot mechanical and motor parameters -->
+      <xacro:property name="PI" value="3.1415926535897931"/>
+      <xacro:property name="wheel_width" value="0.175" />
+
+    <!-- BASE FOOTPRINT -->
+        <link name="summit_base_footprint">
+          <visual>
+              <origin xyz="0 0 0" rpy="0 0 0" />
+              <geometry>
+                 <box size="0.001 0.001 0.001" />
+              </geometry>
+          </visual>
+        </link>
+
+        <joint name="summit_base_footprint_joint" type="fixed">
+          <origin xyz="0 0 ${wheel_radius}" rpy="0 0 0" /> <!-- ${wheel_radius} property must be defined inside wheel description -->
+          <parent link="summit_base_footprint"/>
+          <child link="summit_base_link" />
+        </joint>
+
+  <!-- BASE_LINK -->
+  <link name="summit_base_link">
+    <inertial>
+      <mass value="125.0" />
+      <origin xyz="0 0 0" />
+      <inertia  ixx="1.391" ixy="0.004"  ixz="0.0"  iyy="6.853"  iyz="0.0"  izz="6.125" />
+    </inertial>
+
+    <visual>
+       <origin xyz="0 0 0" rpy="0 0 0" />
+
+       <geometry>
+         <mesh filename="package://summit_description/meshes/base/summit_base.dae"/>
+       </geometry>
+
+       <material name="darkgrey">
+         <color rgba="0.1 0.1 0.1 1"/>
+       </material>
+
+    </visual>
+
+    <collision>
+       <origin xyz="0 0 0" rpy="0 0 0 " />
+       <geometry>
+         <mesh filename="package://summit_description/meshes/base/summit_base.dae"/>
+       </geometry>
+    </collision>
+
+  </link>
+
+    <joint
+    name="main_joint"
+    type="fixed">
+    <origin
+      xyz="-0.2 0.32 0.1"
+      rpy="0 0 0" />
+    <parent
+      link="summit_base_link" />
+    <child
+      link="main_base_link" />
+      </joint>
+
+
+     <!-- Wheel parameters -->
+  <xacro:property name="wheel_offset_x" value="0.2225" />    <!-- x,y,z in translation from base_link to the center of the wheel -->
+  <xacro:property name="wheel_offset_y" value="0.2045" />
+  <xacro:property name="wheel_offset_z" value="0.0" />  
+
+    <xacro:omni_wheel prefix="summit_front_right" parent="summit_base_link" reflect="false">
+      <origin xyz="${wheel_offset_x} -${wheel_offset_y} ${wheel_offset_z}" rpy="0 0 0"/>
+    </xacro:omni_wheel>
+
+    <xacro:omni_wheel prefix="summit_front_left" parent="summit_base_link" reflect="true">
+      <origin xyz="${wheel_offset_x} ${wheel_offset_y} ${wheel_offset_z}" rpy="0 0 0"/>
+    </xacro:omni_wheel>
+
+    <xacro:omni_wheel prefix="summit_back_left" parent="summit_base_link" reflect="true">
+      <origin xyz="-${wheel_offset_x} ${wheel_offset_y} ${wheel_offset_z}" rpy="0 0 0"/>
+    </xacro:omni_wheel>
+
+    <xacro:omni_wheel prefix="summit_back_right" parent="summit_base_link" reflect="false">
+      <origin xyz="-${wheel_offset_x} -${wheel_offset_y} ${wheel_offset_z}" rpy="0 0 0"/>
+    </xacro:omni_wheel>
+
+        <xacro:omni_steering/>
+
+
+       <transmission name="trans_j2">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="j2">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="j2_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_j3">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="j3">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="j3_motor">
+            <hardwareInterface>hardware_interface/PositionJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+
+    <transmission name="summit_back_right_wheel_joint_trans">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="summit_back_right_wheel_joint">
+            <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="summit_back_right_wheel_joint_motor">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="summit_back_left_wheel_joint_trans">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="summit_back_left_wheel_joint">
+            <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="summit_back_left_wheel_joint_motor">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="summit_front_right_wheel_joint_trans">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="summit_front_right_wheel_joint">
+            <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="summit_front_right_wheel_joint_motor">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="summit_front_left_wheel_joint_trans">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="summit_front_left_wheel_joint">
+            <hardwareInterface>hardware_interface/VelocityJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="summit_front_left_wheel_joint_motor">
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <gazebo>
+        <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+            <robotNamespace>/</robotNamespace>
+        </plugin>
+    </gazebo>
+</robot>

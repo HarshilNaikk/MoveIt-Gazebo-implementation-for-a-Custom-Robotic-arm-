@@ -1,0 +1,8 @@
+prefix=/home/harshil/ws_moveit/devel/.private/bot_assembly
+
+Name: bot_assembly
+Description: Description of bot_assembly
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

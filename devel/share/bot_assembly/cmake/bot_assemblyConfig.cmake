@@ -1,0 +1,1 @@
+/home/harshil/ws_moveit/devel/.private/bot_assembly/share/bot_assembly/cmake/bot_assemblyConfig.cmake

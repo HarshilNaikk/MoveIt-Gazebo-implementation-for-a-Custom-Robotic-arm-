@@ -1,0 +1,3 @@
+Symlinking /home/harshil/ws_moveit/devel/share/bot_assembly_control/cmake/bot_assembly_controlConfig.cmake
+Symlinking /home/harshil/ws_moveit/devel/share/bot_assembly_control/cmake/bot_assembly_controlConfig-version.cmake
+Symlinking /home/harshil/ws_moveit/devel/lib/pkgconfig/bot_assembly_control.pc

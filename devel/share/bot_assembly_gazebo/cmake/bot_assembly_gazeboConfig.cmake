@@ -1,0 +1,1 @@
+/home/harshil/ws_moveit/devel/.private/bot_assembly_gazebo/share/bot_assembly_gazebo/cmake/bot_assembly_gazeboConfig.cmake
